@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport">
+
+  <title>PlayCode</title>
+  <link rel="icon" type="image/x-icon" href="jogo/imagens/icone.png">
+
+  <!--bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!---->
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="telaInicial.css">
+</head>
+
+<body class="centralizar">
+  <img src="jogo/imagens/fundoTelaInicial.png" alt="Imagem de Fundo" id="fundoTelaInicial">
+
+  <div class="container">
+    <div>
+      <a href="./sobre.html">
+        <h5 class="logoContainer"><img src="jogo/imagens/logo.png" alt="logo"></h5>
+      </a>
+      
+      <div class="containerDois">
+        <button type="button" id="btnLoginGoogle">
+          <img src="jogo/imagens/google.png" alt="Google" class="icon">
+          <span>Continuar com o Google</span>
+        </button>
+        <p>OU</p>
+          <input type="email" id="btnEmail" name="email"  placeholder="E-mail"></br>
+
+          <div class="input-group">
+            <input class="form-control" id="btnSenha" type="password" name="senha" required  placeholder="Senha"></br>
+            <div class="input-group-append">
+              <span class="input-group-text">
+                <i class="fa fa-eye" id="olhoIcon"></i>
+              </span>
+            </div>
+          </div></br>
+          <button  id="btnEntrar" class="submit">Entrar</button>
+      </div>
+      
+      <a href="./redefinirSenha.html">Redefinir senha</a>
+      <a href="./suporte.html"><img src="jogo/imagens/suporte.png" alt="suporte" class="icon"></a>
+      <a href="./cadastro.html">Crie uma conta</a>
+    </div>
+  
+
+    <!--Pop-up notificaçao-->
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false" style="position: absolute; right: 10px; top: 30px">
+      <div class="toast-header">
+        <strong class="mr-auto">ATENÇÃO</strong>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close" style="width: 15px;   text-decoration: none;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="toast-body">
+        <div id="textoToast"></div>
+        <div class="progress mt-3" style="height: 10px;">
+          <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+    <!---->
+
+    <script  type="module" src="./login.js"> </script>
+</body>
+</html>
