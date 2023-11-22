@@ -105,7 +105,7 @@ document.querySelector('#btnLoginGoogle').addEventListener('click', function () 
       let user = result.user;
       let idToken = await user.getIdToken();
       
-      fetch('http://localhost:10000/loginGoogle', {
+      fetch('https://projeto-tg-ll-vu9k.vercel.app/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
