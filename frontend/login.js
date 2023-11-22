@@ -7,7 +7,7 @@ let firebaseApp, db, auth;
 
 async function initializeFirebase() {
   try {
-    let response = await fetch('http://localhost:10000/firebaseConfig');
+    let response = await fetch('https://projeto-tg-ll-vu9k.vercel.app/firebaseConfig');
     let firebaseConfig = await response.json();
 
     firebaseApp = initializeApp(firebaseConfig);
@@ -38,7 +38,7 @@ document.querySelector('#btnEntrar').addEventListener('click', function () {
       })
       .then(idToken => {
         if (idToken) {
-          fetch('http://localhost:10000/login', {
+          fetch('https://projeto-tg-ll-vu9k.vercel.app', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
