@@ -297,10 +297,6 @@ app.get('/suporte/:id', async (req, res) => {
   }
 });
 
-
-
-
-
 app.post('/responderSolicitacao', async (req, res) => {
   let id = req.body.id;
   let respostaAdmin = req.body.respostaAdmin;
